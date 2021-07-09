@@ -29,7 +29,7 @@
       },
       "id": 10,
       "panels": [],
-      "title": "Row title",
+      "title": "Adhan Player",
       "type": "row"
     },
     {
@@ -366,6 +366,20 @@
       "type": "stat"
     },
     {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 14,
+      "panels": [],
+      "title": "Temp",
+      "type": "row"
+    },
+    {
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -425,7 +439,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 16
       },
       "id": 12,
       "options": {
@@ -459,7 +473,7 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
