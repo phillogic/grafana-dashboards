@@ -15,16 +15,12 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 3,
+  "id": 4,
   "links": [],
   "panels": [
     {
       "collapsed": false,
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -157,7 +153,7 @@
               "options": {
                 "mode": "exclude",
                 "names": [
-                  "adhan_player_loop_counter_total{container=\"adhanplayer\", endpoint=\"metrics\", instance=\"192.168.1.100:8000\", job=\"adhanplayer-metrics-service\", namespace=\"adhanplayer\", pod=\"adhanplayer-bdbb99f7d-tffh6\", service=\"adhanplayer-metrics-service\"}"
+                  "adhan_player_loop_counter_total{container=\"adhanplayer\", endpoint=\"metrics\", instance=\"10.42.4.14:8000\", job=\"adhanplayer-metrics-service\", namespace=\"adhanplayer\", pod=\"adhanplayer-597b7cdd77-lg47z\", service=\"adhanplayer-metrics-service\"}"
                 ],
                 "prefix": "All except:",
                 "readOnly": true
@@ -368,6 +364,91 @@
       "timeShift": null,
       "title": "Minutes to Prayers",
       "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 6,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "node_thermal_zone_temp",
+          "interval": "",
+          "legendFormat": "{{instance}}",
+          "refId": "A"
+        }
+      ],
+      "title": "CPU Temp",
+      "type": "timeseries"
     }
   ],
   "refresh": "10s",
@@ -378,12 +459,12 @@
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Al-Adhan Player",
   "uid": "kfEqS8Wgk",
-  "version": 2
+  "version": 3
 }
